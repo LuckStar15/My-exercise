@@ -1,14 +1,11 @@
-package Fundamentos3;
+package Aula01;
 
 public class exercicio4 {
 
 	public static void main(String[] args) {
-		String texto1 = "Será que são iguais?";
-		String texto2 = "Será que são iguais?";
-		boolean resultado = texto1.equals(texto2);
-		System.out.println(resultado);
-		
-		
+		int a = 3;
+		System.out.println(a % 2 == 0 ? ++a : a++);
+
 	}
 
 }
