@@ -1,15 +1,19 @@
-notas = ["","","","",""]
-t = len(notas)
-soma = 0
-cont = 0
-media = float(input("Digite uma média:"))
-for i in range(t):
-    notas[i]=float(input("digite uma nota:"))
+from biblioteca import*
+while True:
+    opcao = int(input("Digite sua opção\n"
+                      "1 para Gravar\n"
+                      "2 para Ler\n"
+                      "3 para Sair"))
+    match opcao:
+        case 1:
+            t = input("Digite um texto:")
+            gravar(t)
 
-for x in range(t):
-    soma +=notas[x]
-media = soma/t
-for y in range(t):
-    if notas[y]>=media:
-        cont+=1
-print(f"temos {cont} alunos com a nota maior ou igual a {media}")
+        case 2:
+            leitor()
+
+        case 3:
+            break
+
+        case 4:
+            print("opção invalida")

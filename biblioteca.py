@@ -59,7 +59,6 @@ class Pessoa:
     def pararDomir(self):
         print(f"{self.nome} parou de dormir")
         self.dormindo = False
-
 class Animal:
     def __init__(self,nome,cor):
         self.nome=nome
@@ -87,7 +86,6 @@ class Vaca(Animal):
 
     def pararCagar(self):
         print(f"{self.nome} parou de cagar")
-
 class Atleta:
     def __init__(self,nome,peso):
         self.nome=nome
@@ -102,7 +100,6 @@ class Atleta:
     def aquecer(self):
         print(f"{self.nome} está aquecendo")
         self.aquecendo=True
-
 class Nadador(Atleta):
     def __init__(self,nome,peso):
         super().__init__(nome,peso)
@@ -116,8 +113,6 @@ class Nadador(Atleta):
                 print(f"{self.nome} não pode nadar pois está aposentado")
         else:
             print(f"{self.nome} precisa aquecer para nadar")
-
-
 class Corredor(Atleta):
     def __init__(self, nome, peso):
         super().__init__(nome, peso)
@@ -131,8 +126,6 @@ class Corredor(Atleta):
                 print(f"{self.nome} não pode correr pois está aposentado")
         else:
             print(f"{self.nome} precisa se aquecer primeiro antes de correr")
-
-
 class Cilista(Atleta):
     def __init__(self, nome, peso):
         super().__init__(nome, peso)
@@ -146,7 +139,16 @@ class Cilista(Atleta):
                 print(f"{self.nome} não pode pedalar pois está aposentado")
         else:
             print(f"{self.nome} precisa se aquecer primeiro antes de pedalar")
-
 class Triatleta(Nadador,Cilista,Corredor):
     def __init__(self, nome,peso):
         super().__init__(nome,peso)
+
+def gravar(texto):
+    with open("registro.txt", "a") as arquivo:
+        arquivo.write(f"{texto}\n")
+
+def leitor():
+    with open("registro.txt", "r") as arquivo2:
+        txt = arquivo2.read()
+        print(txt)
+
