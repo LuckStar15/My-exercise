@@ -5,3 +5,4 @@
 #syntaxerror quando ocorre um erro de digitação como uma falta ou acrescento de aspa,espaço e etc
 #keyerror é q nem o indexerror mas para o dicionario do sistema
 #valueerror quando um valor diferente é recebido da função que não o aceita (um int recebe um string)
+#criar classe a primeira letra de cada palavra é maiuscula (chama-se pascal-case) criar metodo a partir da segunda palavra a letra é maisucula(chama-se camel-case)
